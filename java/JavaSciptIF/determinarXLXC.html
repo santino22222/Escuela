@@ -1,0 +1,25 @@
+<html>
+<body>
+<script type="text/javascript">
+var frecuencia = Number (prompt ("ingrese la frecuancia"));
+var inductancia = Number (prompt ("ingrese la inductancia"));
+var capacitancia = Number (prompt ("ingrese la capacitancia"));
+var pi = 6.28
+var xl = pi*frecuencia*inductancia
+var multiplicacion = pi*frecuencia*capacitancia
+var xc = 1/multiplicacion
+var promedio = suma/3
+if( xl > xc ){
+ document.write("<b>El circuito es Inductivo</b>");
+}else if (xc > xl){
+ document.write("<b>El circuito es Capacitivo</b>");
+}
+else if (xc = xl){
+ document.write("<b>El circuito esta en Resonacia</b>");
+}
+</script>
+<a href="../index.html" class="nav-link">Volver</a>
+<input type="button" onclick="cuentas()" value="Xl y XC"/>
+<p>Determinar el circuito</p>
+</body>
+</html>

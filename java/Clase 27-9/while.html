@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../estilostareas.css">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="widht=device-width, initial-scale=1"/>
+        <title>Promedio</title>
+    </head>
+    <body>
+        <script>
+            var total = 0;
+            var cantidad = 0;
+            do{
+                ingresado = prompt("ingrese un número");//llega como string
+                ingresado = parseInt(ingresado);//convertido
+                total += ingresado;//total = total + ingresado
+                cantidad++;
+            }
+            while(confirm("¿Quiére cargar otro número?"));
+            document.write("Total acumulado: " + total + "<br />");
+            document.write("Cantidad de valores: " + cantidad + "<br />");
+
+            var promedio = total/cantidad;
+            document.write("Promedio de valores: " + promedio + "<br />");
+        </script>
+        <p><a href="../index.html" target="_blank">Volver</a></p>
+    </body>

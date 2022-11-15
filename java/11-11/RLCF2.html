@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../estilostareas.css">
+        <script type="text/javascript">
+            function XL(L,F){
+                XL= 2*Math.PI*L*F;
+                return XL;
+            }
+            function XC(C,F){
+                XC= 1/(2*Math.PI*F*C);
+                return XC;
+            }
+            function square(x){
+                return x*x;
+            }
+            function Z(R,C,L,F){
+               cuadradoZ= square(R) + square(XL(L,F)-XC(C,F));
+               Z= Math.sqrt (cuadradoZ);
+               return Z;
+            }
+            function FI(R,C,L,F){
+               FI= Math.atan ((XL(L,F)-XC(F,C))/R);
+                return FI;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <script>
+                const F= Number(prompt("Ingresar Frecuencia "))
+                const L= Number(prompt("Ingresar Inductancia "))
+                const C= Number(prompt("Ingresar la capacitancia "))
+                const R= Number(prompt("Ingresar la resistencia "))
+                document.write("<br/>El valor de XL es "+ XL(L,F));
+                document.write("<br/>El valor de XC es "+ XC(C,L));
+                document.write("<br/>El valor de Z es "+ Z(R,C,L,F));
+                document.write("<br/>El valor de FI es "+ FI(R,C,L,F));
+            </script>
+            <p><a href="../index.html" target="_blank">Volver</a></p>
+        </form>
+    </body>
+</html>
